@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <data-table :headers="data.headers" :data="data.food"></data-table>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DataTable from './components/DataTable.vue'
+import JsonData from './DataTable'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DataTable
+  },
+  data: () => ({
+    data: JsonData
+  }),
+  mounted() {
+    this.data = JsonData
+
   }
 }
 </script>
