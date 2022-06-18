@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto border border-gray-200 rounded m-4">
   <table class="min-w-full text-sm divide-y divide-gray-200">
     <table-header :headers="headers"></table-header>
     <table-body :headers="headers" :tbody="data"></table-body>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <data-table :headers="data.headers" :data="data.food"></data-table>
+    <data-table class="ma-4" :headers="data.headers" :data="data.food"></data-table>
   </div>
 </template>
 
