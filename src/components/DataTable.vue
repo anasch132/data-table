@@ -1,8 +1,12 @@
 <template>
   <div class="overflow-x-auto border border-gray-200 rounded m-4">
     <table class="min-w-full text-sm divide-y divide-gray-200">
-      <table-header :headers="headers"></table-header>
+      <table-header
+        class="divide-x divide-gray-100"
+        :headers="headers"
+      ></table-header>
       <table-body
+        class="divide-x divide-gray-100"
         :headers="headers"
         :tbody="data"
         @changed="changed"

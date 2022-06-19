@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <data-table
-      class="ma-4 bg-purple-500"
+      class="ma-4"
       :headers="data.headers"
       :data="data.body"
       @save="saveData"
@@ -22,7 +22,6 @@ export default {
     data: JsonData,
   }),
   created() {
-    console.log(JsonData.body);
     this.data.body = JsonData.body.map((item) => {
       if (item.key == "key3")
         return {

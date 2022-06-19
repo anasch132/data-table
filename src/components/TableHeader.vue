@@ -1,17 +1,14 @@
 <template>
   <thead>
-    <tr>
+    <tr class="divide-x divide-gray-200">
       <th
         v-for="header in headers"
         :key="header.id"
-        class="p-4 font-medium text-left text-gray-900 whitespace-nowrap"
+        class="p-4 font-medium text-center text-gray-900 whitespace-nowrap"
       >
-        <div class="flex items-center">
+        <div class="flex items-center text-center">
           {{ header.text }}
         </div>
-      </th>
-      <th class="p-4 font-medium text-left text-gray-900 whitespace-nowrap">
-        Actions
       </th>
     </tr>
   </thead>

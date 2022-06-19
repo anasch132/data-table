@@ -6,7 +6,7 @@
       "align": "start",
       "sortable": false,
       "value": "name",
-      "__classes__": ["bg-blue-500"]
+      "__classes__": [""]
     },
     { "text": "Energy", "value": "energy", "id": 2 },
     { "text": "Protein", "value": "protein", "id": 3 },
@@ -17,8 +17,8 @@
   "body": [
     {
       "__classes__": {
-        "__all__": ["bg-red-500"],
-        "fat": ["bg-green-500"]
+        "__all__": [""],
+        "fat": [""]
       },
       "key": "key1",
       "editable": true,
@@ -30,6 +30,11 @@
       "sodium": "1.5%",
       "__children__": [
         {
+          "__classes__": {
+            "__all__": [""],
+            "name": [""]
+          },
+          "editable": true,
           "name": "child",
           "energy": 201,
           "protein": 5.0,
