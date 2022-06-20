@@ -58,25 +58,4 @@ describe("TableCell.vue", () => {
 
     expect(cell.findComponent('input').exists()).toBe(false);
   });
-
-//   it("Should have the new data set", async () => {
-//     let classes = ["bg-red-200"];
-//     let value = "test-value";
-//     let name = "test-name";
-//     let editable = true;
-
-//     const wrapper = shallowMount(TableCell, {
-//       propsData: { classes, value, name, editable },
-//     });
-
-//     const cell = wrapper.get("[data-test=td-test-name]");
-//     await cell.trigger("click");
-//     await cell.get('input').setValue("test-value-1");
-//     await cell.get('input').trigger("change");
-    
-//     expect(cell.get('div').text()).toContain("test-value-1");
-
-//   })
-
-  //   it("Should ")
 });
