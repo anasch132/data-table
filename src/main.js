@@ -3,9 +3,6 @@ import App from './App.vue'
 import './registerServiceWorker'
 import store from './store'
 import './assets/tailwind.css'
-import VIcon from 'vue-tailwind-icons';
- 
-Vue.use(VIcon)
 
 Vue.config.productionTip = false
 
