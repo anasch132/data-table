@@ -9,13 +9,7 @@
         <slot v-for="header in headers">
           <table-cell
             :key="header.id"
-            :classes="
-              data.__classes__
-                ? data.__classes__[header.value]
-                : header.__classes__
-                ? header.__classes__
-                : ''
-            "
+            :classes="getClasses(data, header)"
             :name="header.value"
             :value="handleData(data[header.value], header.value)"
             :editable="data.editable"
@@ -24,17 +18,15 @@
         </slot>
       </tr>
       <slot v-for="(datachild, i) in data.__children__" class="divide-none">
-        <tr :key="i + Math.random()" class="">
+        <tr
+          :key="i + Math.random()"
+          :class="datachild.__classes__ ? datachild.__classes__.__all__ : ''"
+        >
           <slot v-for="header in headers">
             <table-cell
+              class="px-6"
               :key="header.id"
-              :classes="
-                datachild.__classes__
-                  ? datachild.__classes__[header.value]
-                  : header.__classes__
-                  ? header.__classes__
-                  : ''
-              "
+              :classes="getClasses(datachild, header)"
               :name="header.value"
               :value="handleData(datachild[header.value], header.value)"
               :editable="datachild.editable"
@@ -78,9 +70,21 @@ export default {
       return data;
     },
     editInput(event, row) {
-      console.log(event);
       let nwRow = { ...row, ...event };
       this.$emit("changed", nwRow);
+    },
+
+    getClasses(data, header) {
+      let cellClasses =
+        data.__classes__ && data.__classes__[header.value]
+          ? data.__classes__[header.value]
+          : [];
+      let headerClasses = header.__classes__ ? header.__classes__ : [];
+
+      cellClasses = cellClasses.filter((element) => !!element);
+      headerClasses = headerClasses.filter((element) => !!element);
+
+      return cellClasses.concat(headerClasses);
     },
   },
 };

@@ -2,9 +2,13 @@
   <td
     class="text-left font-medium text-gray-900 whitespace-nowrap hover:bg-gray-100"
     :class="classes"
+    :data-test="'td-' + name"
+    :ref="'td-' + name"
     @click="toggleEdit"
   >
-    <div v-if="!edit" class="m-4 w-full h-full">{{ value }}</div>
+    <div :data-test="'cell-' + name" v-if="!edit" class="m-4 w-full h-full">
+      {{ value }}
+    </div>
     <input
       v-if="edit"
       type="text"
