@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import DataTable from '@/components/DataTable.vue'
-import JsonTable from "../../src/DataTable.json"
+import JsonTable from "../../src/assets/DataTable.json"
 
 describe('DataTable.vue', () => {
   it('Should be rendred', () => {

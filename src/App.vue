@@ -12,7 +12,7 @@
 
 <script>
 import DataTable from "./components/DataTable.vue";
-import JsonData from "./DataTable";
+import JsonData from "./assets/DataTable";
 export default {
   name: "App",
   components: {

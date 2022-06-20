@@ -1,6 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
 import TableBody from "@/components/TableBody.vue";
-import TableCell from "@/components/TableCell.vue"
 
 describe("TableBody.vue", () => {
   it("Should be rendred", () => {
