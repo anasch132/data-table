@@ -202,7 +202,7 @@ When the data is changed on the table by the user, the table emits an event call
 
 you can then make your backend call to change the data and also apply the changes, also the table rerender the changed data.
 
-## Installation
+## Running for test
 
 Install the dependencies and start the server test.
 
