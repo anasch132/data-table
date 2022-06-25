@@ -22,7 +22,8 @@ to make the component work perfectly you should respect this schema of json file
       "text": "text to be shown on the header",
       "id": __ID__,
       "value": "The value to be mapped from body data",
-      "__classes__": ["Array of classes to be used for the column part"]
+      "__classes__": ["Array of classes to be used for the column part"],
+      "__sort__": Boolean
     },
     ],
     "body": [
@@ -58,13 +59,19 @@ This is an example of data in Json file
       "text": "Food Items (Nutrition 100g)",
       "id": 1,
       "value": "name",
-      "__classes__": ["bg-red-200"]
+      "__sort__": false,
+      "__classes__": [""]
     },
-    { "text": "Energy", "value": "energy", "id": 2 },
-    { "text": "Protein", "value": "protein", "id": 3 },
-    { "text": "Fat", "value": "fat", "id": 4},
-    { "text": "Carbohydrate", "value": "carbohydrate", "id": 5 },
-    { "text": "Sodium", "value": "sodium", "id": 6 }
+    { "text": "Energy", "__sort__": true, "value": "energy", "id": 2 },
+    { "text": "Protein", "__sort__": true, "value": "protein", "id": 3 },
+    { "text": "Fat", "__sort__": true, "value": "fat", "id": 4 },
+    {
+      "text": "Carbohydrate",
+      "__sort__": true,
+      "value": "carbohydrate",
+      "id": 5
+    },
+    { "text": "Sodium", "__sort__": true, "value": "sodium", "id": 6 }
   ],
   "body": [
     {
