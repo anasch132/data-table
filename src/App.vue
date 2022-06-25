@@ -3,7 +3,7 @@
     <data-table
       class="ma-4"
       :headers="data.headers"
-      :data="data.body"
+      :dataTable="data.body"
       @save="saveData"
     >
     </data-table>

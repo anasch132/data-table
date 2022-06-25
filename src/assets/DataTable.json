@@ -4,13 +4,19 @@
       "text": "Food Items (Nutrition 100g)",
       "id": 1,
       "value": "name",
-      "__classes__": ["bg-red-200"]
+      "__sort__": false,
+      "__classes__": [""]
     },
-    { "text": "Energy", "value": "energy", "id": 2 },
-    { "text": "Protein", "value": "protein", "id": 3 },
-    { "text": "Fat", "value": "fat", "id": 4},
-    { "text": "Carbohydrate", "value": "carbohydrate", "id": 5 },
-    { "text": "Sodium", "value": "sodium", "id": 6 }
+    { "text": "Energy", "__sort__": true, "value": "energy", "id": 2 },
+    { "text": "Protein", "__sort__": true, "value": "protein", "id": 3 },
+    { "text": "Fat", "__sort__": true, "value": "fat", "id": 4 },
+    {
+      "text": "Carbohydrate",
+      "__sort__": true,
+      "value": "carbohydrate",
+      "id": 5
+    },
+    { "text": "Sodium", "__sort__": true, "value": "sodium", "id": 6 }
   ],
   "body": [
     {
@@ -41,21 +47,21 @@
           "sodium": "1.5%"
         },
         {
-            "name": "child",
-            "energy": 201,
-            "protein": 5.0,
-            "fat": 34,
-            "carbohydrate": 5.5,
-            "sodium": "1.5%"
-          },
-          {
-            "name": "child",
-            "energy": 201,
-            "protein": 5.0,
-            "fat": 34,
-            "carbohydrate": 5.5,
-            "sodium": "1.5%"
-          }
+          "name": "child",
+          "energy": 201,
+          "protein": 5.0,
+          "fat": 34,
+          "carbohydrate": 5.5,
+          "sodium": "1.5%"
+        },
+        {
+          "name": "child",
+          "energy": 201,
+          "protein": 5.0,
+          "fat": 34,
+          "carbohydrate": 5.5,
+          "sodium": "1.5%"
+        }
       ]
     },
     {
