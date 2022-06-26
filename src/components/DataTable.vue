@@ -4,6 +4,7 @@
       <table-header
         class="divide-x divide-gray-100"
         :headers="headers"
+        :SortDir="currentSortDir"
         @sortingKey="sort"
       ></table-header>
       <table-body
@@ -37,7 +38,7 @@ export default {
   },
   data: () => ({
     currentSort: null,
-    currentSortDir: "asc",
+    currentSortDir: null,
   }),
   mounted() {
     // console.log(this.headers)
@@ -63,7 +64,9 @@ export default {
     sort(s) {
       //if s == current sort, reverse
       if (s === this.currentSort) {
-        this.currentSortDir = this.currentSortDir === "asc" ? "desc" : "asc";
+        if (!this.currentSortDir) this.currentSortDir = "asc";
+        else
+          this.currentSortDir = this.currentSortDir === "asc" ? "desc" : "asc";
       }
       this.currentSort = s;
     },

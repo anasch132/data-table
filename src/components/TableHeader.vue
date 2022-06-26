@@ -14,6 +14,23 @@
           :class="header.__sort__ ? 'cursor-pointer' : ''"
         >
           {{ header.text }}
+          <slot v-if="header.__sort__">
+            <font-awesome-icon
+              v-if="SortDir && sorting_key == header.value"
+              class="mx-2"
+              :class="
+                SortDir == 'asc'
+                  ? 'transition duration-300 transform rotate-180'
+                  : 'transition duration-300 transform rotate-0'
+              "
+              icon="fa-solid fa-sort-up"
+            />
+            <font-awesome-icon
+              class="mx-2"
+              v-if="!SortDir"
+              icon="fa-solid fa-sort"
+            />
+          </slot>
         </div>
       </th>
     </tr>
@@ -28,12 +45,18 @@ export default {
     },
     SortDir: {
       type: String,
+      default: null,
     },
   },
+  data: () => ({
+    sorting_key: null,
+  }),
   methods: {
     sortingKey(key) {
-      console.log("clicked", key);
-      if (key.__sort__) this.$emit("sortingKey", key.value);
+      if (key.__sort__) {
+        this.sorting_key = key.value;
+        this.$emit("sortingKey", key.value);
+      }
     },
   },
 };
